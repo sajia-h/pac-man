@@ -1,0 +1,184 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/
+
+/* Box sizing */
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* Reset margins */
+
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  max-width: 70vw;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  /* width: auto;
+  height: auto; */
+  margin-top:0;
+  margin-bottom:0;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #eee;
+  background-color: #191b20;
+  /* background-image: radial-gradient(
+      at 2% 19%,
+      hsl(299,62%,41%, 1) 0,
+      hsl(306,61%,53%, 0) 50%
+    ),
+    radial-gradient(
+      at 100% 12%,
+      hsl(306,61%,53%, 1) 0,
+      hsla(320, 88%, 60%, 0) 50%
+    ),
+    radial-gradient(
+      at 0% 66%,
+      hsl(335,87%,61%, 1) 0,
+      hsla(170, 86%, 68%, 0) 50%
+    ),
+    radial-gradient(
+      at 54% 76%,
+      hsla(272, 86%, 50%, 1) 0,
+      hsla(272, 86%, 50%, 0) 50%
+    ),
+    radial-gradient(
+      at 53% 75%,
+      hsl(22,100%,71%, 1) 0,
+      hsla(118, 90%, 52%, 0) 50%
+    ),
+    radial-gradient(
+      at 50% 93%,
+      hsla(200, 92%, 52%, 1) 0,
+      hsla(200, 92%, 52%, 0) 50%
+    ),
+    radial-gradient(
+      at 50% 30%,
+      hsl(43,100%,76%, 1) 0,
+      hsla(315, 86%, 59%, 0) 50%
+    ); */
+}
+/* Grid layout */
+.grid {
+  z-index: -2;
+  background-size: contain;
+  display: flex;
+  flex-wrap: wrap;
+  width: 560px;
+  height: 560px;
+  border: solid rgb(44, 0, 110) 10px;
+  border-radius: 10px;
+  background-color: rgb(219,62,143);
+  box-shadow: 2px 5px 5px #00000034;
+  transform: scale(0.8,0.8);
+}
+
+.grid div {
+  width: 20px;
+  height: 20px;
+}
+
+.wall {
+  background-color: rgb(54,11,119);
+}
+
+/* Pac-dot */
+.pac-dot {
+  background-color: white;
+  border: solid 5px rgb(219,62,143);
+  box-sizing: border-box;
+  border-radius: 10px;
+  animation: blinker 1s linear infinite;
+  z-index: -1;
+}
+
+/* Power-pellet */
+.power-pellet {
+  background-image: radial-gradient(rgb(255, 180, 180) 55%, transparent 5%);
+  animation: blinker 1s linear infinite;
+  z-index: -1;
+}
+
+/* Pac-Man */
+
+.pac-man {
+  background-color: rgb(255, 234, 0);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* Ghosts */
+/* Override styling of pac-dot border */
+.casper {
+  background-color: rgb(183, 255, 216);
+  border: 0px;
+  z-index: 99;
+}
+.dong {
+  background-color: rgb(255,162,108);
+  border: 0px;
+  z-index: 99;
+}
+.salem {
+  background-color: blue;
+  border: 0px;
+  z-index: 99;
+}
+.luci {
+  background-color: fuchsia;
+  border: 0px;
+  z-index: 99;
+}
+.scared-ghost {
+  background-color: aquamarine;
+  border: 0px;
+  z-index: 99;
+}
+
+h3 {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+  margin-left:13rem;
+  margin-top: -3rem;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+      max-width: fit-content;
+    min-height: 100vh;
+    overflow: hidden;
+    font-size: 10px;
+    margin-left: -7rem;
+  }
+      .grid {
+        transform: scale(0.5,0.5);   } 
+
+        h3 {
+          margin-top:-8rem;
+        }
+}
